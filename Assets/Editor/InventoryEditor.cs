@@ -1,35 +1,38 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Buttons))]
+[CustomEditor(typeof(InventoryButtons))]
 public class InventoryEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
+        DrawDefaultInspector();
 
-        Buttons buttons = (Buttons)target;
+        InventoryButtons inventory = (InventoryButtons)target;
+
+        GUILayout.Label("The Cube's buttons for scale and position");
 
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Increase Size"))
+        if (GUILayout.Button("Button 1: Increase Size"))
         {
-            buttons.ChangeSize();
+            inventory.ChangeSize();
         }
 
-        if (GUILayout.Button("Reset Size"))
+        if (GUILayout.Button("Button 2: Reset Size"))
         {
-            buttons.ResetSize();
+            inventory.ResetSize();
         }
 
-        if (GUILayout.Button("Move Position"))
+        if (GUILayout.Button("Button 3: Move Position"))
         {
-            buttons.ChangePosition();
+            inventory.ChangePosition();
         }
 
-        if (GUILayout.Button("Reset Position"))
+        if (GUILayout.Button("Button 4: Reset Position"))
         {
-            buttons.ResetPosition();
+            inventory.ResetPosition();
         }
 
         GUILayout.EndHorizontal();

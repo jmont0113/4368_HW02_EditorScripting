@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buttons : MonoBehaviour
+public class InventoryButtons : MonoBehaviour
 {
-
     private Vector3 scaleChange;
     private Vector3 positionChange;
 
@@ -28,13 +27,13 @@ public class Buttons : MonoBehaviour
 
     public void ChangePosition()
     {
-        positionChange = new Vector3(-1f, 3f, 8f);
+        positionChange = new Vector3(10f, 3f, 8f);
         transform.localPosition = positionChange;
     }
 
     public void ResetPosition()
     {
-        positionChange = new Vector3(1f, -3f, -8f);
+        positionChange = new Vector3(-10f, -3f, -8f);
         transform.localPosition = positionChange;
     }
 }
