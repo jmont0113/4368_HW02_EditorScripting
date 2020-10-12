@@ -6,8 +6,6 @@ public class HelpBoxAttribute : Editor
 {
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
-
         base.OnInspectorGUI();
         EditorGUILayout.HelpBox("Adjust the inventory settings by adding an item name, " +
             "defense/attack rating, rarity, and slot", MessageType.Warning);
